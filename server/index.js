@@ -1,5 +1,10 @@
 const express = require('express');
-let app = express();
+const bodyParser = require('body-parser')
+const app = express();
+const PORT = 3000;
+
+app.use(bodyParser.urlencoded({ extended:true }));
+app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../client/dist'));
 
@@ -15,9 +20,9 @@ app.get('/repos', function (req, res) {
   // This route should send back the top 25 repos
 });
 
-let port = 1128;
 
-app.listen(port, function() {
-  console.log(`listening on port ${port}`);
+
+app.listen(PORT, function() {
+  console.log(`listening on port ${PORT}`);
 });
 
