@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "localhost:1128",
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js"
@@ -23,6 +24,7 @@
     "jquery": "^3.1.1",
     "mongoose": "^4.9.6",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "request": "^2.88.2"
   }
 }
